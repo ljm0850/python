@@ -98,12 +98,27 @@ print(number['썬'])
 - 가변 자료형,순서가 없음
   - key에는 불변 자료형만 가능
   - value에는 모든 자료형 가능
-
 - `dict()`를 통해 변환 가능
+- dict.get()
+
+```python
+my_home = {
+    'location': 'gj',
+    'code': '82+',
+}
+
+# 딕셔너리 원소 접근
+print(my_home['location'])
+#print(my_home['name']) 오류발생
+print(my_home.get('location'))
+#print(my_home.get('name')) None으로 나옴
+```
 
 
 
-# 연산자(operator)
+
+
+#  연산자(operator)
 
 ### 논리연산자
 
