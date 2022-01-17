@@ -33,23 +33,6 @@ def function(a):
 
 ## Built-in Functions
 
-#### range
-
-- range(시작값,종료값,증감치)
-
-```python
-for i in range(0,5,1):
-    print(i)
-```
-
-```
-0
-1
-2
-3
-4
-```
-
 #### 수학과 관련된 함수
 
 - abs() : 절대값
