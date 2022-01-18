@@ -40,7 +40,7 @@ def function(a):
 - ~~pow(a,b) : a의 b제곱~~
 - ~~max(),min() : 최대,최소값 반환~~
 
-- ~~sorted() 오름차순 정리~~
+- .sort  sorted() :오름차순 정리
 
 #### 문장과 관련된 함수
 

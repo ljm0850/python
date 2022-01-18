@@ -39,3 +39,22 @@
 - nonlocal : 지역변수가 아닌곳에서 찾음
 
 - local :지역변수에서 찾음
+
+
+
+```python
+import datetime
+today = datetime.datetime.now()
+print(today)
+```
+
+```py
+import math
+
+num1 = 0.1 * 3
+num2 = 0.3
+
+abs(num1 - num2) <= sys.float_info.epsilon
+isclose(num1, num2)
+```
+
