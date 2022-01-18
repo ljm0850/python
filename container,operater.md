@@ -114,6 +114,15 @@ print(my_home.get('location'))
 #print(my_home.get('name')) None으로 나옴
 ```
 
+```python
+classbook = {}
+a=int(input('인원수'))
+for i in range(a):
+    classbook[input('이름')] = int(input('나이'))
+
+print(classbook)
+```
+
 
 
 
