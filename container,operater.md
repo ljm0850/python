@@ -72,8 +72,6 @@ for i in range(0,5,1):
   #1 2 3
   ```
 
-- 
-
 
 
 ## set
@@ -99,8 +97,16 @@ print(number['썬'])
 number['썬'] = 4
 print(number['썬'])
 
-#3
-#4
+for pp in number.keys():
+    print(pp)
+for pp in number.values():
+    print(pp)
+for pp in number.items():
+    print(pp)
+#3 4
+#파 이 썬
+#1 2 4
+#('파',1)('이',2)('썬',4)
 ```
 
 - 가변 자료형,순서가 없음
@@ -131,7 +137,7 @@ for i in range(a):
 print(classbook)
 ```
 
-
+- 
 
 
 
