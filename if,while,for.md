@@ -195,8 +195,18 @@ square**2 for num in range(1,7)
   - 반복문을 종료
 
 - continue
-  - continue 이후의 코드 블록은 수행하지 않고, 다음 반복을 수행
+  - continue 이후의 코드 블록은 수행하지 않고, 다음 반복을 수행(for나 while로 되돌아감)
 
+    ```python
+    num = []
+    for i in num :
+        if i <19:
+            continue 
+            
+    ```
+  
+    
+  
 - for-else
   - 끝까지 반복문을 실행한 이후에 else문 실행
   - break를 통해 중간에 종료되면 else도 실행되지 않음

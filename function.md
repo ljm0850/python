@@ -70,6 +70,8 @@ def factorial(n):
 
 ## Built-in Functions
 
+- `print(dir(__builtins__))`
+
 - lambda
 
   - 익명 함수, 임시로 함수를 사용하기 위해 
@@ -91,12 +93,37 @@ def factorial(n):
 #### 문장과 관련된 함수
 
 - ~~all()~~ : 모든 항목이 true면 true반환, 한개라도 false이면 false 반환
+
 - ~~any()~~ : 모든 항목이 false면 false반환, 한개라도 true이면 true 반환
+
 - ~~zip()~~ : 인자를 받아 동일 '위치'의 항목을 묶어 튜플 항목으로 객체 생성
+
 - ~~isdigit()~~: 숫자면 true, 문자가 섞이면 false
+
 - 문자열.split(sep='구분자',maxsplit=분할횟수)
   - 문자열을 maxsplit 횟수만큼 sep의 구분자를 기준으로 자름
+
   - sep 기본값은 none, maxsplit의 기본값은 -1
+
+    ```py
+    numbers = '1,2,3,4,5,67 8,9'
+    print(numbers.split(',',2))
+    #['1', '2', '3,4,5,67 8,9']
+    ```
+
+    
+
+- '구분자'.join()
+
+  ```python
+  numbers = [1, 2, 3]
+  print(''.join([str(num) for num in numbers]))
+  #123
+  print('-'.join([str(num) for num in numbers]))
+  #1-2-3
+  ```
+
+  
 
 
 #### 변환함수
@@ -118,7 +145,9 @@ def factorial(n):
 
 #### 그외
 
-- ~~filter(함수,목록)~~ : 조건에 해당하는 항목을 걸러내는 함수
+- ~~filter(function.iterable))~~ : 조건에 해당하는 항목을 걸러내는 함수
+
+  - true인 것들로만 구성하여 `filter object` 로 반환
 
 - map(함수,인자) :  두번째 인자로 반복가능한 자료형을 받아 첫번째 인자로 함수 적용 결과 반환
 
@@ -134,6 +163,16 @@ def factorial(n):
 - ~~dir()~~ : 어떤 객체를 인자로 넣어주면 해당 객체가 어떤 변수와 메소드를 가지고 있는지 나열
 
 - ~~globals()~~: 글로벌 심볼 테이블을 딕셔너리 형태로 반환
+
+  - ```
+    num = 1
+    def local_scope():
+        global num
+        num = 5
+    
+    local_scope()
+    print(num)
+    ```
 
 - ~~locals()~~:지역 심볼 테이블을 딕셔너리 형태로 반환
 

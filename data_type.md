@@ -33,6 +33,8 @@ print(type(bool))
 
 - complex (복소수)
 
+  - complex.real + complex.imag 구조
+  
   
 
 ## 문자열

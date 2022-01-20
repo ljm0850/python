@@ -72,6 +72,8 @@ for i in range(0,5,1):
   #1 2 3
   ```
 
+`def dict_list(*args)` 와 같이 쓰일때는 args가 ()가 씌워져서 tuple로 들어옴
+
 
 
 ## set
