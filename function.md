@@ -235,3 +235,64 @@ nunber = random.sample(lotto,6)
 print(number)
 ```
 
+
+
+### with
+
+- 사용후 반납해야 하는 경우 사용
+
+- ```python
+  class hi:
+      def __enter__(self):
+          print('start')
+          return self
+      
+      def hello(self, name):
+          print('hello' + name)
+          
+  	def __exit__(self, exc_type, exc_val, exc_tb):
+          #이부분은 아직 잘 이해x
+          print('end')
+  ```
+
+  
+
+- ```python
+  with hi() as h:
+      h.hello('ljm')
+  
+  # start
+  # hello ljm
+  # end
+  ```
+
+
+
+### open
+
+- open('파일명', '파일모드', encoding='인코딩방식')
+
+  - 인코딩 방식 **utf-8**: 다국어 지원 , **ecu-kr** : 한국어 지원
+  - 파일모드 write,read,a
+    - a: 파일을 이어쓰는 모드
+
+- ```python
+  file = open('chobo.txt','w', encoding='utf-8')
+  file.write('Hello, world!\n')
+  file.write('Hi, python\n')
+  file.close()
+  ```
+
+  - .close() 안적으면 프로그렘 종료시까지 파일 수정 불가
+
+
+
+```python
+if __name__ == '__main__':
+#메인 함수의 선언,시작    
+    bookJson = open('data/book.json', encoding='UTF8')
+    #bookJson이 호출되면 해당 주소를 UTF-8로 인코딩하여 open
+    book_list = json.load(bookJson)
+    #해당 파일을 읽을때 사용
+```
+
