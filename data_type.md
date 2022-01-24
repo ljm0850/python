@@ -61,6 +61,97 @@ print(type(bool))
 \0 = Null
 ```
 
+### 문자열 조회/탐색 메소드
+
+- `s.find(x)`: x의 첫 번째 위치를 반환, 없으면 -1 반환
+
+  ```python
+  'apple'.find('p') #1
+  ```
+
+- `s.index(x)`: x의 첫 번째 위치를 반환, 없으면 오류 발생
+
+  ```python
+  'apple'.index('p') #1
+  'apple'.index('k') # error
+  ```
+
+- `s.isalpha()`:알파벳 문자 여부(유니코드 상)
+
+  ```python
+  'ㄱㄴㄷ'.isalpha() #true
+  ```
+
+- `s.isupper()`:대문자 여부
+
+  ```python
+  'Ab'.isupper() #False
+  ```
+
+- `s.islower()`:소문자 여부
+
+  ```python
+  'ab'.islower() #True
+  ```
+
+- `s.istitle()`:타이틀 형식 여부
+
+  ```python
+  'Title Title!'.istitle() #True
+  ```
+
+  
+
+### 문자열 변경 메소드
+
+- s.replace(old,new[,count]) : 바꿀 대상 글자를 새로운 글자로 바꿔서 반환
+
+  ```python
+  'coffee'.replace('e','i') #coffii
+  'mooooyaho'.replace('o','@',2) #m@@ooyaho
+  ```
+
+- s.strip([chars]) : 공백이나 특정 문자를 제거
+
+  - strip : 양쪽 , lstrip : 왼쪽, rstrip : 오른쪽 제거
+
+  ```python
+  '안녕하세요!!!!'.rstrip('!') #'안녕하세요'
+  ```
+
+  
+
+- s.split([chars]) : 공백이나 특정 문자를 기준으로 분리
+
+  ```python
+  'kim-sp'.split('-') #['kim','sp']
+  'a b c'.split() #['a','b','c']
+  ```
+
+  
+
+- #'separator'.join([literable]) : 구분자로 iterable 합침
+
+  ```python
+  '!'.join('ljm')
+  
+  #'l!j!m'
+  ```
+
+- #s.capitalize() : 가장 첫 번쨰 글자를 대문자로
+
+- #s.title() : `나 공백 이후를 대문자로
+
+- #s.upper() : 모두 대문자
+
+- #s.lower() : 모두 소문자
+
+- #s.swapcase() : 대-소문자 변경
+
+
+
+
+
 ## Print
 
 ### f-strings
