@@ -15,7 +15,7 @@ print(number[0])
 - `tuple()`를 통해 변환 가능
 - 단일 항목일 경우 `a=1,`과 같이 마지막 쉼표 필요
 
-## list
+## **list**
 
 ```python
 number = [1,3,6,8,10,32]
@@ -25,7 +25,10 @@ print(number[3])
 ```
 
 - 가변 자료형,순서가 있음
+
 - `list()`를 통해 변환 가능
+
+  
 
 ### list 메소드
 
@@ -58,6 +61,16 @@ print(number[3])
   #['arabica','robustas']
   ```
 
+  ```python
+  num = [1,2,3,4,5,6,7]
+  print(numbers.pop(0))
+  print(numbers)
+  # 1
+  # [2,3,4,5,6,7]
+  ```
+
+  
+
 - `.extend(m)`순회형 m의 모든 항목들의 리스트 끝에 추가(+=)
 
   ```python
@@ -74,6 +87,19 @@ print(number[3])
   #['arabica','robustas','l','u','w','a','k']
   ```
 
+  ```python
+  #.append와 a.extend
+  app =[]
+  app.append('apple')
+  #app = ['apple']
+  
+  ext = []
+  ext.extend('apple')
+  #ext = ['a','p','p','l','e']
+  ```
+
+  
+
 - `.index(x, start, end)`리스트에 있는 항목 중 가장 왼쪽에 있는 항목 x 인덱스를 반환
 
   ```python
@@ -86,12 +112,15 @@ print(number[3])
 
 - `.reverse()`리스트 순서를 반대로 뒤집음
 
+  - `.revese()`는 원본을 바꿈
+  - 내장함수`reversed()`는 원본을 안바꿈
+
 - `.sort()`리스트를 정렬
 
   ```python
   num=[5,2,4,3,1]
   #num1은 원본 변경이라 할당이 안됨
-  num1 = number.sort()
+  num1 = num.sort()
   print(num,num1)
   #[1,2,3,4,5] None
   ```
@@ -239,16 +268,50 @@ for i in range(a):
 print(classbook)
 ```
 
+- dict.setdefault()
+
+  - key가 dictionary에 있으면 value를 돌려준다
+
+  - key가 없을 경우 default값을 갖는 key를 삽입한후 default를 반환
+
+    ```python
+    setdef = {'성': 'l', '이름':'jm'}
+    print(setdef.setdefault('성'))
+    setdef.setdefault('호','흑우')
+    
+    print(setdef)
+    #ㅣ
+    #{'성': 'l', '이름': 'jm', '호': '흑우'}
+    ```
+
+    
+
 - 메소드
+
   - d.clear() 
+
   - d.copy() : 복사본 반환
+
   - d.keys() : 모든 키를 반환
+
   - d.values() : 모든 값을 반환
+
   - d.items() : 키-값 쌍을 반환
+
   - d.get(k) : 키 k의 값을 반환하는데 없을경우 None
+
   - d.get(k, v): 키 k의 값을 반환하는데 없을경우 v반환
+
   - d.pop(k) : 키 k인 값을 반환하고 삭제, 없을경우 KeyError
+
   - d.update(NewDict): 딕셔너리 d값을 매핑하여 업데이트,덮어쓰기
+
+    ```python
+    my_dict = {'apple': '사과', 'banana': '바나나', 'melon': '멜론'}
+    my_dict.update({'apple':'사과아'})
+    ```
+
+    
 
 
 
@@ -284,3 +347,74 @@ range(10)[5:8] -> range(5,8)
 - & : 교집합
 - -: 여집합
 - ^:대칭차
+
+
+
+## 할당
+
+```python
+num1 = [1, 2, 3]
+num2 = num1
+
+num2[0] = 5
+print(num1)
+#[5,2,3]
+```
+
+
+
+## 얕은 복사(Shallow copy)
+
+- slice 연산자
+
+  ```python
+  b=a[:]
+  b[0] = 5
+  print(a,b)
+  #[1, 2, 3] [5, 2, 3]
+  ```
+
+- list() 활용
+
+  ```python
+  b = list(a)
+  b[0] = 5
+  print(a,b)
+  #[1, 2, 3] [5, 2, 3]
+  ```
+
+  
+
+- **얕은 복사의 문제**
+
+  ```python
+  a = [1, 2, [1, 2]]
+  
+  b = a[:]
+  b[2][0] = 5
+  
+  print(id(a))
+  print(id(b))
+  #id가 다르게 나옴
+  print(id(a[2]))
+  print(id(b[2]))
+  print(a)
+  # id가 같게 나옴
+  #[1, 2, [5, 2]]
+  ```
+
+  
+
+## 깊은 복사 (Deep copy)
+
+```python
+import copy
+
+a=[1,2,[1,2]]
+b=copy.deepcopy(a)
+
+b[2][0] = 5
+print(a)
+#[1, 2, [1, 2]]
+```
+
