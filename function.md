@@ -84,11 +84,16 @@ def factorial(n):
 #### 수학과 관련된 함수
 
 - abs() : 절대값
+
 - ~~divmod() : 몫과 나머지를 tuple로 반환~~
+
 - ~~pow(a,b) : a의 b제곱~~
+
 - ~~max(),min() : 최대,최소값 반환~~
 
 - .sort  sorted() :오름차순 정리
+
+  
 
 #### 문장과 관련된 함수
 
@@ -111,8 +116,6 @@ def factorial(n):
     #['1', '2', '3,4,5,67 8,9']
     ```
 
-    
-
 - '구분자'.join()
 
   ```python
@@ -123,7 +126,7 @@ def factorial(n):
   #1-2-3
   ```
 
-  
+- 
 
 
 #### 변환함수
@@ -184,7 +187,16 @@ def factorial(n):
 
 - ~~eval()~~: 식을 실행하는 함수 `eval('abs(-8)') => 8`
 
+- reversed() : 역순으로 만들어 reversed object로 형성
 
+  ```python
+  num=10
+  for i in reversed(range(num)):
+      print(i)
+  # 9 8 7 6 5 4 3 2 1 0
+  ```
+
+  
 
 ## Python module&package
 
