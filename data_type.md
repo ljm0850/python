@@ -138,6 +138,16 @@ print(type(bool))
   #'l!j!m'
   ```
 
+  ```python
+  #int를 join하려면 str로 변환 해야함
+  a = [1,2,3,4,5]
+  " ".join(map(str,a))
+  
+  #1 2 3 4 5
+  ```
+
+  
+
 - #s.capitalize() : 가장 첫 번쨰 글자를 대문자로
 
 - #s.title() : `나 공백 이후를 대문자로
