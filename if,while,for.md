@@ -75,8 +75,20 @@ while n<3:
 ```
 
 - 조건이 true인 동안 반복적으로 실행 되기에 종료조건이 반드시 필요
+  - 밑과 같이 작성시 계속 반복되다가 except가 실행되면 break를 통해 반복문 종료
 
-  
+
+```python
+pythonls=[]
+while True:
+    try:
+     a= int(input())
+     pythonls.append(a)
+    except:
+        break
+```
+
+
 
 ### __for__
 
