@@ -126,10 +126,11 @@ def factorial(n):
   #1-2-3
   ```
 
-- 
-
+  
 
 #### 변환함수
+
+- 아스키 코드 https://ko.wikipedia.org/wiki/ASCII
 
 - chr(정수) : 정수를 입력하면 그 숫자의 유니코드에 대응하는 문자 반환
 
