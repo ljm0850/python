@@ -58,3 +58,17 @@ abs(num1 - num2) <= sys.float_info.epsilon
 isclose(num1, num2)
 ```
 
+
+
+## 시간 측정
+
+```python
+import datetime
+
+a= datetime.datetime.now()
+#작동 코드
+b= datetime.datetime.now()
+print(b-a)
+
+```
+

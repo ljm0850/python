@@ -116,6 +116,7 @@ for <변수명> in <iterable>:
 	~~~~
 else :
 	~~~~
+#for - else의 경우 for문에 break등에 의해 끊기지 않고 완료 되었을시 else문 작동
 ```
 
 
