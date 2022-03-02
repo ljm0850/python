@@ -311,7 +311,17 @@ print(classbook)
     my_dict.update({'apple':'사과아'})
     ```
 
-    
+- dict.fromkeys(ls,a):
+
+  - ls 리스트 값 : a 인 dict 생성
+
+  - ```python
+    a = ['l','j','m']
+    b = [1,2,3]
+    c = dict.fromkeys(a,b)
+    print(c)
+    # {'l': [1, 2, 3], 'j': [1, 2, 3], 'm': [1, 2, 3]}
+    ```
 
 
 
