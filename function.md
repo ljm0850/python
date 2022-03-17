@@ -103,7 +103,10 @@ def factorial(n):
 
 - ~~zip()~~ : 인자를 받아 동일 '위치'의 항목을 묶어 튜플 항목으로 객체 생성
 
-- ~~isdigit()~~: 숫자면 true, 문자가 섞이면 false
+- isdigit(): 숫자면 true, 문자가 섞이면 false
+
+  - isdecima() : 0~9까지의 수로 이루어 졌는지를 확인 (3**2 형태는 false) -> int변환 가능 여부 확인
+  - isnumeric() : 1/2 와 같은 수도 true
 
 - 문자열.split(sep='구분자',maxsplit=분할횟수)
   - 문자열을 maxsplit 횟수만큼 sep의 구분자를 기준으로 자름
