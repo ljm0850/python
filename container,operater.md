@@ -214,7 +214,7 @@ print(a)
   - s.discard(x) : 항목 x가 있을 경우 x삭제
   - s.update(t): set t에 있는 모든 항목중 셋s에 없는 항목을 추가
   - s.clear() : 모든 항목 제거
-  - s.isdisjouint(t): set s와 set t가 같은 항목이 하나도 없으면 True
+  - s.isdisjoint(t): set s와 set t가 같은 항목이 하나도 없으면 True
   - s.issubset(t) :set s가 set t의 하위 set일 경우 True
   - s.issuperset(t): set s가 set t의 상위 set일 경우 True
 
