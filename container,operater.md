@@ -132,6 +132,21 @@ print(number[3])
   # [5, 2, 4, 3, 1] [1, 2, 3, 4, 5]
   ```
 
+  ```python
+  mix_num_alpha1 = [(4,'e'),(1,'b'),(1,'a'),(2,'c'),(3,'d')]
+  mix_num_alpha1.sort(key = lambda num:num[0] )
+  print(mix_num_alpha1)
+  # [(1, 'b'), (1, 'a'), (2, 'c'), (3, 'd'), (4, 'e')]
+  
+  mix_num_alpha2 = [(4,'e'),(1,'b'),(1,'a'),(2,'c'),(3,'d')]
+  mix_num_alpha2.sort(key = lambda alpha:alpha[1])
+  mix_num_alpha2.sort(key = lambda num:num[0] )
+  print(mix_num_alpha2)
+  # [(1, 'a'), (1, 'b'), (2, 'c'), (3, 'd'), (4, 'e')]
+  ```
+
+  
+
 - `.count(x)`리스트에서 항목 x가 몇개 존재하는지 갯수 반환
 
   ```python
@@ -322,6 +337,30 @@ print(classbook)
     print(c)
     # {'l': [1, 2, 3], 'j': [1, 2, 3], 'm': [1, 2, 3]}
     ```
+
+
+
+### defaultdict
+
+- `from collections import defaultdict`
+
+```python
+from collections import defaultdict
+test = defaultdict(int)
+test['l']
+print(test)
+# defaultdict(<class 'int'>, {'l': 0})
+
+test2 = defaultdict(list)
+test2['l']
+print(test2)
+// defaultdict(<class 'list'>, {'l': []})
+```
+
+- key만 주고 value값을 주지 않을 경우 자동으로 기본값을 value로 제공
+  - int 기본값:  0
+  - list 기본값: []
+  - dict 기본값: {}
 
 
 
