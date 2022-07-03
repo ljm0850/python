@@ -89,7 +89,7 @@ def factorial(n):
 
 - ~~pow(a,b) : a의 b제곱~~
 
-- ~~max(),min() : 최대,최소값 반환~~
+- max(),min() : 최대,최소값 반환
 
 - .sort  sorted() :오름차순 정리
 
@@ -135,9 +135,9 @@ def factorial(n):
 
 - 아스키 코드 https://ko.wikipedia.org/wiki/ASCII
 
-- chr(정수) : 정수를 입력하면 그 숫자의 유니코드에 대응하는 문자 반환
+- **chr(정수)** : 정수를 입력하면 그 숫자의 유니코드에 대응하는 문자 반환
 
-- ord(문자): 문자를 입력하면 그 문자의 유니코드에 대응하는 정수 반환
+- **ord(문자)**: 문자를 입력하면 그 문자의 유니코드에 대응하는 정수 반환
 
   ```python
   chr=chr(97)
