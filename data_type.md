@@ -160,6 +160,15 @@ print(type(bool))
 
 
 
+- **re.sub**('패턴', '바꿀문자열', '문자열', 바꿀횟수)
+
+  - ```python
+    import re
+    new_string = re.sub('[0-9]+', '', '0 8 l 5 j m 0')
+    # new_string = '  l  j m '
+    # [0-9]+ 는 정규표현식 찾아보자
+    ```
+
 
 
 ## Print
